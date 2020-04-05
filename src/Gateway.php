@@ -210,7 +210,7 @@ class Gateway extends AbstractGateway
      */
     public function purchase(array $options = []): RequestInterface
     {
-        return $this->createRequest(PurchaseRequest::class, $options);
+        return $this->createRequest(AuthorizeRequest::class, $options);
     }
 
     /**
