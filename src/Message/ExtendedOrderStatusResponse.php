@@ -336,4 +336,12 @@ class ExtendedOrderStatusResponse extends OrderStatusResponse
         $bankInfo = $this->getBankInfo();
         return array_key_exists('bankCountryName', $bankInfo) ? $bankInfo['bankCountryName'] : null;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function isSuccessful()
+    {
+        return $this->getOrderStatus() == 2;
+    }
 }
