@@ -35,7 +35,8 @@ class AuthorizeRequest extends AbstractRequest
             'jsonParams',
             'sessionTimeoutSecs',
             'expirationDate',
-            'bindingId'
+            'bindingId',
+            'orderBundle',
         ];
 
         return $this->specifyAdditionalParameters($data, $additionalParams);
@@ -217,6 +218,16 @@ class AuthorizeRequest extends AbstractRequest
     public function getBindingId()
     {
         return $this->getParameter('bindingId');
+    }
+
+    public function getOrderBundle()
+    {
+        return $this->getParameter('orderBundle');
+    }
+
+    public function setOrderBundle($orderBundle)
+    {
+        return $this->setParameter('orderBundle', $orderBundle);
     }
 
     /**
