@@ -171,6 +171,6 @@ class OrderStatusResponse extends AbstractResponse
      */
     public function isSuccessful()
     {
-        return $this->getOrderStatus() == 2;
+        return ($this->getOrderStatus() == 2) || $this->getOrderStatus() == 1;
     }
 }
