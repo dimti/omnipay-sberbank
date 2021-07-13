@@ -50,6 +50,7 @@ class Gateway extends AbstractGateway
             'userName' => '',
             'password' => '',
             'testMode' => false,
+            'endPoint' => 'https://securepayments.sberbank.ru/payment/rest/'
         ];
     }
 
