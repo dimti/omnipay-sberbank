@@ -227,7 +227,7 @@ class AuthorizeRequest extends AbstractRequest
 
     public function setOrderBundle($orderBundle)
     {
-        return $this->setParameter('orderBundle', $orderBundle);
+        return $this->setParameter('orderBundle', is_array($orderBundle) ? json_encode($orderBundle) : $orderBundle);
     }
 
     /**
